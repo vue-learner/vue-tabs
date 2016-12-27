@@ -5,8 +5,7 @@
             <tab v-for="tab in tabs" :tab-data="tab" @close="close(tab)" @click.native="clickTab(tab)"></tab>
         </ul>
     </div>
-    <div class="tabs-content-wrapper" ref="contentWrapEl">
-    </div>
+    <div class="tabs-content-wrapper" ref="contentWrapEl"></div>
 </div>
 </template>
 <script>
