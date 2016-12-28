@@ -22,7 +22,7 @@
 
 <script>
 function onActiveChange () {
-    console.log('on active change')
+    // console.log('on active change')
 }
 export default {
     name: 'hello',
@@ -32,18 +32,18 @@ export default {
         }
     },
     beforeCreate () {
-        console.log('1', this.$tab.params, this.$taber)
+        // console.log('1', this.$tab.params, this.$taber)
         this.$taber.$on('vue-tabs-active-change', onActiveChange)
     },
     beforeDestroy () {
-        console.log('hello destroy')
+        // console.log('hello destroy')
         this.$taber.$off('vue-tabs-active-change', onActiveChange)
     },
     created () {
-        console.log('2', this.$tab, this.$taber)
+        // console.log('2', this.$tab, this.$taber)
     },
     mounted () {
-        console.log('3', this.$tab, this.$taber)
+        // console.log('3', this.$tab, this.$taber)
     }
 }
 </script>

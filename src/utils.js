@@ -24,10 +24,10 @@ export const store = {
         if (!key || !value) {
             return
         }
-        window.localStorage[key] = JSON.stringify(value)
+        window.sessionStorage[key] = JSON.stringify(value)
     },
     get (key) {
-        let value = window.localStorage[key]
+        let value = window.sessionStorage[key]
         if (!value) {
             return null
         }

@@ -4,6 +4,9 @@
         <ul class="tabs-list">
             <tab v-for="tab in tabs" :tab-data="tab" @close="close(tab)" @click.native="clickTab(tab)"></tab>
         </ul>
+        <ul class="tabs-list-vertical">
+            <tab v-for="tab in tabs" :tab-data="tab" @close="close(tab)" @click.native="clickTab(tab)"></tab>
+        </ul>
     </div>
     <div class="tabs-content-wrapper" ref="contentWrapEl"></div>
 </div>
