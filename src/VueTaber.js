@@ -114,13 +114,16 @@ export default class VueTaber {
         if (!this.persist) {
             return
         }
-        const storeTabs = store.get(consts.STORE_KEY)
-        if (!storeTabs) {
-            return
+
+        let pinTabs = store.get(consts.PIN_KEY) || [];
+        let currentTab = store.get(consts.CURRENT_KEY);
+
+        const storeTabs = currentTab ? pinTabs.concat(currentTab) : pinTabs;
+        if (storeTabs && storeTabs.length) {
+			storeTabs.forEach((tab) => {
+				this.open(tab)
+			})
         }
-        storeTabs.forEach((tab) => {
-            this.open(tab)
-        })
     }
 
     mounted () {

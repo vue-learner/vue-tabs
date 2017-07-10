@@ -36,5 +36,7 @@ export const store = {
 }
 
 export const consts = {
-    STORE_KEY: '$TABS'
+    STORE_KEY: '$TABS',
+	CURRENT_KEY: '$CURRENT_TAB',
+	PIN_KEY: '$PIN_TABS'
 }
